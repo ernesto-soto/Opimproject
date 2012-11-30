@@ -10,15 +10,18 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
-/* hero unit color */
+/* Hero unit color */
 
 .hero-unit {
-  background-color: #ffffff;
+  background-color: #464646;
   float:center;
   opacity:0.9;
-  border:5px solid #464646;
-
+  border:5px solid #000000;
+  padding-topt: 50px;
+  padding-bottom: 50px;
+  
 }
+
 /* universal */
 
 html {
@@ -55,6 +58,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  text-shadow: 0px 0px 10px white;
 }
 
 h2 {
@@ -63,7 +67,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: orange;
 }
 
 p {

@@ -19,27 +19,89 @@
 <% else %>
 
   <div class="hero-unit">
-    <h1><font face="helvetica" color="black">R.S.V.P.</font></h1>
+    <h1><font face="Helvetica" color="black">R.S.V.P.</font> </h1>
+    
 
-    <style>
-    body
-    {
-      background-image:url('http://i49.tinypic.com/4v6002.jpg');
-      background-color: #000000;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position:center center;
+<style>
+body
+{ 
+background-image:url('http://i46.tinypic.com/2mczt49.jpg');
+background-color: #000000;
+background-repeat:no-repeat;
+background-attachment:scroll;
+background-position:center center; 
+}
+</style>
 
-    }
-    </style>
 
-    <h2><font color="orange">
-      What will you discover?
-    </font></h2>
-<center>
-    <%= link_to "Sign up now!", signup_path, 
-                                class: "btn btn-large btn-primary" %>
-                              </center>
+<h2>
+<script language="JavaScript1.2">
+
+/*
+Neon Lights Text
+By JavaScript Kit (http://javascriptkit.com)
+For this script, TOS, and 100s more DHTML scripts,
+Visit http://www.dynamicdrive.com
+*/
+
+var message="What will you discover?"
+var neonbasecolor="gray"
+var neontextcolor="orange"
+var flashspeed=75  //in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",1500)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+</h2>
+ <center><%= link_to "Sign up now!", signup_path, 
+                                class: "btn btn-large btn-primary" %></center> 
   </div>
 
+
 <% end %>
+
+
