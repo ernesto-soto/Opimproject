@@ -1,0 +1,36 @@
+
+git remote add origin (gitname)
+git push -u origin master
+
+
+to upload to github-& heroku----first time-
+
+git add .
+git commit -am "name it"
+git push heroku master
+heroku open
+ 
+second time ----
+
+git add .
+git commit -am "name it"
+git push heroku 
+heroku open
+
+cd sites
+$ git clone git@github.com:ernesto-soto/Groupapp.git
+$ cd sample_app_2nd_ed
+$ bundle install
+$ bundle exec rake db:migrate
+$ bundle exec rake db:test:prepare
+$ bundle exec rspec spec/
+
+
+heroku run rake db:migrate 
+
+
+
+installing heroku
+gem install heroku in sites
+heroku keys:add
+2
