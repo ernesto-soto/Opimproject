@@ -2,7 +2,7 @@
 
 <div class="row">
 <div class="span6 offset3">
-
+<h3>
 <%= form_for @event do |f| %>
 	<%= f.label :event_name %>
 	<%= f.text_field :event_name, placeholder: "What's your event called?" %>
@@ -14,7 +14,10 @@
 	<%= f.label :location %>
 	<%= f.text_field :location, placeholder: "Where is your event being held?" %>
 
+<br><br>
 
+
+</h3>
 <center><%= f.submit "Create Event", class: "btn btn-large btn-warning" %>
 
 <% end %>

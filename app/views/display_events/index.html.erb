@@ -1,0 +1,31 @@
+<% provide(:title, 'Events') %>
+<h1>All Events</h1>
+
+
+  <% @event.each do |e| %>
+  <div style="border-style:groove;color:white;align:left">
+  	  
+  	  <h1 style="color:red; "><%= link_to e.event_name, @user %>
+  	  </h1><br />
+  	 <h3> Description:
+  	  <%= e.description %><br />
+  	 </h3><h3> Location:
+  	  <%= e.location %><br />
+  	</h3>
+  
+
+   <%= time_ago_in_words e.created_at%> ago
+  <%end%>
+
+ </div>
+  <style>
+body
+{ 
+  background-image:url('http://i45.tinypic.com/2hohhxg.jpg');
+background-color: #000000;
+
+background-repeat:no-repeat;
+background-attachment:scroll;
+background-position:center center; 
+}
+</style>
