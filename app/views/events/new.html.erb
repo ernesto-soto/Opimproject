@@ -1,0 +1,33 @@
+<h1>Events</h1>
+
+<div class="row">
+<div class="span6 offset3">
+
+<%= form_for @event do |f| %>
+	<%= f.label :event_name %>
+	<%= f.text_field :event_name, placeholder: "What's your event called?" %>
+
+	<%= f.label :description %>
+
+	<%= f.text_field :description, :size => 20, placeholder: "Describe your event.." %>
+
+	<%= f.label :location %>
+	<%= f.text_field :location, placeholder: "Where is your event being held?" %>
+
+
+<center><%= f.submit "Create Event", class: "btn btn-large btn-warning" %>
+
+<% end %>
+</div>
+</div>
+ <style>
+body
+{ 
+  background-image:url('http://i45.tinypic.com/2hohhxg.jpg');
+background-color: #000000;
+
+background-repeat:no-repeat;
+background-attachment:scroll;
+background-position:center center; 
+}
+</style> 
